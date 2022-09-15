@@ -28,9 +28,9 @@ background-color: #6943FF;
     box-sizing: border-box;
 
 position: absolute;
-width: 117px;
+width: 150px;
 height: 83px;
-left: 217px;
+left: 201px;
 top: 101px;
 
 border: 2px solid #B295FF;
@@ -193,6 +193,26 @@ color: #353535;
 
 }
 #line4{
+    position: absolute;
+width: 370px;
+height: 25px;
+left: 77px;
+top: 56px;
+
+/* text-sm/leading-5/font-normal */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+/* or 143% */
+
+text-align: center;
+
+color: #353535;
+}
+#default1,#default2,#default3{
     position: absolute;
 width: 370px;
 height: 25px;

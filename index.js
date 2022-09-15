@@ -1,9 +1,13 @@
 let arr=[];
+
 let textEl=document.getElementById("rectangle-el");
 let itemEl=document.getElementById("item1");
 let item2El=document.getElementById("item2");
 let item3El=document.getElementById("item3");
 let btnEl=document.getElementById("btn");
+let defaulEl=document.getElementById('default1')
+let defaulEl1=document.getElementById('default2')
+let defaulEl2=document.getElementById('default3')
 
 btnEl.addEventListener('click',function(){
     arr.push(textEl.value);
@@ -16,22 +20,19 @@ btnEl.addEventListener('click',function(){
 
 function render1(arr){
     let temporaryString="";
-    if(arr){
+    defaulEl.textContent=""
+    if(arr.length!=0){
         let convert=(arr[0]*3.281).toFixed(3);
         let convert1=(arr[0]*0.304).toFixed(3);
         temporaryString+= `<p id="line2"> ${arr[0]} meters = ${convert} feet | ${arr[0]} feet = ${convert1} </p>`
         localStorage.clear();
-    }
-    else{
-        temporaryString+=`
-        1 meters = 3.281 feet | 1 feet = 0.304 meters
-        `
     }
     itemEl.innerHTML=temporaryString;
 }
 
 function render2(arr){
     let temporaryString1="";
+    defaulEl1.textContent=""
     if(arr){
         let convert2=(arr[0]*0.264).toFixed(3);
         let convert3=(arr[0]*3.787).toFixed(3);
@@ -42,6 +43,7 @@ function render2(arr){
 
 function render3(arr){
     let temporaryString3="";
+    defaulEl2.textContent=""
     if(arr){
         let convert4=(arr[0]*2.204).toFixed(3);
         let convert5=(arr[0]*0.453).toFixed(3);
